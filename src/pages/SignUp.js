@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import CheckBox from "../components/CheckBox";
 import Form from "../components/Form";
@@ -26,9 +27,11 @@ function SignUp() {
           icon="lock_clock"
         />
         <CheckBox text="I agree to the Terms & Conditions" />
-        <Button>Suubmit now</Button>
+        <Button>
+          <span>Sign Up</span>
+        </Button>
         <div className="info">
-          Already have an account? <a href="login.html">Login</a> instead.
+          Already have an account? <Link to="/login">Login</Link>
         </div>
       </Form>
     </div>
