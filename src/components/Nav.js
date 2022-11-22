@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "../styles/Nav.module.css";
 
 export default function Nav() {
@@ -7,16 +8,19 @@ export default function Nav() {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <a href="index.html" className={styles.brand}>
-              <h3>Quiz app</h3>
-            </a>
+            <Link to="/">
+              <p className={styles.brand}>
+                <h3>Quiz app</h3>
+              </p>
+            </Link>
           </li>
         </ul>
         <div className={styles.account}>
           <span className="material-icons-outlined" title="Account">
             account_circle
           </span>
-          <a href="signup.html">Signup</a>
+          <Link to="/signup">Signup</Link>
+          <Link to="/login">Login</Link>
         </div>
       </nav>
     </div>
